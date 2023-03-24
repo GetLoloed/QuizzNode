@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12 mb-3">
+            <form action="/username" method="POST">
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur</label>
+                    <input class="form-control" type="text" name="username" id="username" placeholder="Entrez votre nom d'utilisateur">
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input class="form-control" type="password" name="password" id="password" placeholder="Entrez votre mot de passe">
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Soumettre</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

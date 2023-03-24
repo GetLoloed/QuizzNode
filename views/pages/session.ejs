@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <form action="/quizz" method="POST">
+        <p class="lead"><%= locals._content %> <br>
+           <%= locals._theme %></p>
+        <% answers.forEach((answer) => { %>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" value="<%= answer.id %>" id="answer-<%= answer.id %>">
+                <label class="form-check-label" for="answer-<%= answer.id %>"><%= answer._content %></label>
+            </div>
+        <% }) %>
+        <button class="btn btn-primary" type="submit">Soumettre</button>
+    </form>
+    <form action="/arret" method="post">
+        <button class="btn btn-danger" type="submit">Arrêter</button>
+    </form> 
+</body>
+</html>

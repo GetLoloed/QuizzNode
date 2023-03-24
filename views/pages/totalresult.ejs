@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lien vers Bootstrap CSS -->
+    <%- include('partials/head') %>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="container">
+        <h1>Les meilleurs scores</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Nombre de bonne réponse</th>
+                    <th>Nombre total répondu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user => { %>
+                    <tr>
+                        <td><%= user.user %></td>
+                        <td><%= user.correct %></td>
+                        <td><%= user.total %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <!-- Lien vers jQuery et Bootstrap JS -->
+   </body>
+</html>
